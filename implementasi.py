@@ -183,9 +183,5 @@ if __name__ == "__main__":
 
     finally:
         sniff_thread.join()
+    print("Network traffic detection stopped.")
 
-<<<<<<< HEAD
-    print("Network traffic detection stopped.")
-=======
-    print("Network traffic detection stopped.")
->>>>>>> d4055b958f5184fc77c3a7584230803b06e4e7e5
