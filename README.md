@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# Deteksi-Serangan-DDoS-Dengan-Machine-Learning
 =======
 # Deteksi Serangan DDoS Dengan Machine Learning
 
