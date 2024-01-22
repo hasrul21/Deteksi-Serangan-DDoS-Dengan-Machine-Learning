@@ -34,7 +34,13 @@ last_packet_time = time.time()
 
 async def send_telegram_notification(message):
     bot = Bot(token=TELEGRAM_TOKEN)
-    await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode="Markdown")
+    #await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode="Markdown")
+    try:
+        await asyncio.wait_for(bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode="Markdown"), timeout=10)
+    except asyncio.TimeoutError:
+        print("Operasi kirim pesan ke Telegram waktu habis.")
+    except Exception as e:
+        print(f"Error: {e}")
 
 
 def notify_telegram(message):
